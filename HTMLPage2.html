@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.16267c61754b92abbde080d513b9d595?rik=oPNMVigly2LCbQ&riu=http%3a%2f%2faswdc.in%2fUpload%2fProject%2f44+Unit+Converter.png&ehk=DBf28vxU6tPyPk89nYo9gbZxGAUEl5S34vEzSjuUE%2b8%3d&risl=&pid=ImgRaw&r=0" />
+    <title>Unit Converter</title>
+</head>
+<body>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <h1>
+        <b id="headtext">Online Unit Converter</b>
+    </h1>
+    <p>
+        <h2>
+            Unit converter
+            <img src="https://th.bing.com/th/id/R.16267c61754b92abbde080d513b9d595?rik=oPNMVigly2LCbQ&riu=http%3a%2f%2faswdc.in%2fUpload%2fProject%2f44+Unit+Converter.png&ehk=DBf28vxU6tPyPk89nYo9gbZxGAUEl5S34vEzSjuUE%2b8%3d&risl=&pid=ImgRaw&r=0" alt="Calculator" width="40" height="40">
+        </h2>
+    </p>
+    <div class="tab">
+        <button class="tablink" onclick="openTab(event, 'Length')" id="defaultOpen">Length</button>
+        <button class="tablink" onclick="openTab(event, 'Temperature')">Temperature</button>
+        <button class="tablink" onclick="openTab(event, 'Area')">Area</button>
+        <button class="tablink" onclick="openTab(event, 'Volume')">Volume</button>
+        <button class="tablink" onclick="openTab(event, 'Weight')">Weight</button>
+        <button class="tablink" onclick="openTab(event, 'Time')">Time</button>
+    </div>
+
+    <div id="Length" class="tabcontent">
+        <p>
+            <table border="1" id="border">
+                <tr>
+                    <td id="tablein">
+                        <br>
+                        <label for="from" id="from"><b>From:</b></label>
+                        <input type="number" id="unit1" name="unit1" placeholder="Enter number" />
+                        <label for="to" id="to"><b>To:</b></label>
+                        <input type="number" id="unit2" name="unit2" disabled />
+                        <br><br>
+                        <select id="unit11" size="10">
+                            <option value="meter" selected>Meter</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="centimeter">Centimeter</option>
+                            <option value="millimeter">Millimeter</option>
+                            <option value="micrometer">Micrometer</option>
+                            <option value="nanometer">Nanometer</option>
+                            <option value="yard">Yard</option>
+                            <option value="mile">Mile</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                            <option value="light year">Light Year</option>
+                        </select>
+                        <select id="unit12" size="10" onclick="l.convert()">
+                            <option value="meter" selected>Meter</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="centimeter">Centimeter</option>
+                            <option value="millimeter">Millimeter</option>
+                            <option value="micrometer">Micrometer</option>
+                            <option value="nanometer">Nanometer</option>
+                            <option value="yard">Yard</option>
+                            <option value="mile">Mile</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                            <option value="light year">Light Year</option>
+                        </select>
+                        <br><br>
+                    </td>
+            </table>
+        </p>
+    </div>
+
+    <div id="Temperature" class="tabcontent">
+
+        <p>
+            <table border="1" id="border">
+                <tr>
+                    <td id="tablein">
+                        <br>
+                        <label for="from" id="from"><b>From:</b></label>
+                        <input type="number" id="type1" name="type1" placeholder="Enter number" />
+                        <label for="to" id="to"><b>To:</b></label>
+                        <input type="number" id="type2" name="type2" disabled />
+                        <br><br>
+                        <select id="type11" size="10">
+                            <option value="celcius" selected>Celcius</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="fahreinheit">Fahreinheit</option>
+                        </select>
+                        <select id="type12" size="10" onclick="t.tconvert()">
+                            <option value="celcius" selected>Celcius</option>
+                            <option value="kelvin">Kelvin</option>
+                            <option value="fahreinheit">Fahreinheit</option>
+                        </select>
+            </table>
+        </p>
+    </div>
+
+    <div id="Area" class="tabcontent">
+
+        <p>
+            <table border="1" id="border">
+                <tr>
+                    <td id="tablein">
+                        <br>
+                        <label for="from" id="from"><b>From:</b></label>
+                        <input type="number" id="area1" name="area1" placeholder="Enter number" />
+                        <label for="to" id="to"><b>To:</b></label>
+                        <input type="number" id="area2" name="area2" disabled />
+                        <br><br>
+                        <select id="area11" size="10">
+                            <option value="sqmeter" selected>Square Meter</option>
+                            <option value="sqkilo">Square Kilometer</option>
+                            <option value="sqcent"> Square Centimeter</option>
+                            <option value="sqmilli">Square Millimeter</option>
+                            <option value="sqdeci">Square Decimeter</option>
+                            <option value="sqyard">Square Yard</option>
+                            <option value="sqmile">Square Mile</option>
+                            <option value="sqfoot">Square Foot</option>
+                            <option value="sqinch">Square Inch</option>
+                            <option value="hect">Hectare</option>
+                            <option value="acre">Acre</option>
+                        </select>
+                        <select id="area12" size="10" onclick="a.aconvert()">
+                            <option value="sqmeter" selected>Square Meter</option>
+                            <option value="sqkilo">Square Kilometer</option>
+                            <option value="sqcent"> Square Centimeter</option>
+                            <option value="sqmilli">Square Millimeter</option>
+                            <option value="sqdeci">Square Decimeter</option>
+                            <option value="sqyard">Square Yard</option>
+                            <option value="sqmile">Square Mile</option>
+                            <option value="sqfoot">Square Foot</option>
+                            <option value="sqinch">Square Inch</option>
+                            <option value="hect">Hectare</option>
+                            <option value="acre">Acre</option>
+                        </select>
+                        <br><br>
+                    </td>
+            </table>
+        </p>
+    </div>
+
+    <div id="Volume" class="tabcontent">
+        <p>
+            <table border="1" id="border">
+                <tr>
+                    <td id="tablein">
+                        <br>
+                        <label for="from"><b>From:</b></label>
+                        <input type="number" id="volume1" name="volume1" placeholder="Enter number" />
+                        <label for="to" id="to"><b>To:</b></label>
+                        <input type="number" id="volume2" name="volume2" disabled />
+                        <br><br>
+                        <select id="volume11" size="11">
+                            <option value="cmeter" selected>Cubic Meter</option>
+                            <option value="ckilo">Cubic Kilometer</option>
+                            <option value="ccent"> Cubic Centimeter</option>
+                            <option value="liter">Liter</option>
+                            <option value="mliter">Milliliter</option>
+                            <option value="cfoot">Cubic Foot</option>
+                            <option value="cinch">Cubic Inch</option>
+                        </select>
+                        <select id="volume12" size="11" onclick="v.vconvert()">
+                            <option value="cmeter" selected>Cubic Meter</option>
+                            <option value="ckilo">Cubic Kilometer</option>
+                            <option value="ccent"> Cubic Centimeter</option>
+                            <option value="liter">Liter</option>
+                            <option value="mliter">Milliliter</option>
+                            <option value="cfoot">Cubic Foot</option>
+                            <option value="cinch">Cubic Inch</option>
+                        </select>
+                        <br><br>
+                    </td>
+            </table>
+        </p>
+    </div>
+    <div id="Weight" class="tabcontent">
+        <p>
+            <table border="1" id="border">
+                <tr>
+                    <td id="tablein">
+                        <br>
+                        <label for="from" id="from"><b>From:</b></label>
+                        <input type="number" id="weight1" name="weight1" placeholder="Enter number" />
+                        <label for="to" id="to"><b>To:</b></label>
+                        <input type="number" id="weight2" name="weight2" disabled />
+                        <br><br>
+                        <select id="weight11" size="11">
+                            <option value="kgram" selected>Kilogram</option>
+                            <option value="gram">Gram</option>
+                            <option value="millig">Milligram</option>
+                            <option value="pound">Pound</option>
+                            <option value="ounce">Ounce</option>
+                            <option value="carrat">Carrat</option>
+                            <option value="tonne">Imperial Ton</option>
+                        </select>
+                        <select id="weight12" size="11" onclick="w.wconvert()">
+                            <option value="kgram" selected>Kilogram</option>
+                            <option value="gram">Gram</option>
+                            <option value="millig">Milligram</option>
+                            <option value="pound">Pound</option>
+                            <option value="ounce">Ounce</option>
+                            <option value="carrat">Carrat</option>
+                            <option value="tonne">Imperial Ton</option>
+                        </select>
+                        <br><br>
+                    </td>
+            </table>
+        </p>
+    </div>
+    <div id="Time" class="tabcontent">
+        <p>
+            <table border="1" id="border">
+                <tr>
+                    <td id="tablein">
+                        <br>
+                        <label for="from" id="from"><b>From:</b></label>
+                        <input type="number" id="time1" name="time1" placeholder="Enter number" />
+                        <label for="to" id="to"><b>To:</b></label>
+                        <input type="number" id="time2" name="time2" disabled />
+                        <br><br>
+                        <select id="time11" size="11">
+                            <option value="second" selected>Second</option>
+                            <option value="millis">Millisecond</option>
+                            <option value="minute">Minute</option>
+                            <option value="hour">Hour</option>
+                            <option value="day">Day</option>
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
+                        </select>
+                        <select id="time12" size="11" onclick="time.timeconvert()">
+                            <option value="second" selected>Second</option>
+                            <option value="millis">Millisecond</option>
+                            <option value="minute">Minute</option>
+                            <option value="hour">Hour</option>
+                            <option value="day">Day</option>
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
+                        </select>
+                        <br><br>
+                    </td>
+            </table>
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
