@@ -1462,6 +1462,30 @@ class Time {
         else if (from === "day" && to === "year") {
             time = input / 365;
         }
+        
+        else if (from === "week" && to === "second") {
+            time = input * 604800;
+            time = time.toExponential(4);
+        }
+        else if (from === "week" && to === "millis") {
+            time = input * (6.048 * 10 ** 8);
+            time = time.toExponential(4);
+        }
+        else if (from === "week" && to === "minute") {
+            time = input * 10080;
+        }
+        else if (from === "month" && to === "hour") {
+            time = input * 168;
+        }
+        else if (from === "week" && to === "day") {
+            time = input * 7;
+        }
+        else if (from === "week" && to === "week") {
+            time = input;
+        }
+        else if (from === "week" && to === "month") {
+            time = input/ 4.345;
+        }
 
         else if (from === "month" && to === "second") {
             time = input * 2628000;
@@ -1536,5 +1560,4 @@ function openTab(evt, unitName) {
     evt.currentTarget.className += " active";
 }
 
-// Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
