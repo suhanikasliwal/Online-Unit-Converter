@@ -1474,7 +1474,7 @@ class Time {
         else if (from === "week" && to === "minute") {
             time = input * 10080;
         }
-        else if (from === "month" && to === "hour") {
+        else if (from === "week" && to === "hour") {
             time = input * 168;
         }
         else if (from === "week" && to === "day") {
@@ -1486,11 +1486,13 @@ class Time {
         else if (from === "week" && to === "month") {
             time = input/ 4.345;
         }
-
+        else if(from ==="week" && to === "year")
+        {
+         time = input / 52.143;   
+        }
         else if (from === "month" && to === "second") {
             time = input * 2628000;
             time = time.toExponential(2);
-
         }
         else if (from === "month" && to === "millis") {
             time = input * (2.628 * 10 ** 9);
@@ -1527,7 +1529,7 @@ class Time {
             time = input * 525600;
             time = time.toExponential(2);
         }
-        else if (from === "minute" && to === "hour") {
+        else if (from === "year" && to === "hour") {
             time = input * 8760;
         }
         else if (from === "year" && to === "day") {
